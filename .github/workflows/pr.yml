@@ -1,16 +1,15 @@
-name: PR Target Workflow
-on: 
-  pull_request_target:
-  
+on: pull_request
+
 jobs:
-  PR-Greeting:
-    name: Pull Request Target
+  example_comment_pr:
     runs-on: ubuntu-latest
+    name: An example job to comment a PR
     steps:
-      - name: Add the PR Review Policy
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Comment PR
         uses: thollander/actions-comment-pull-request@v2
         with:
-          comment_tag: Greetings
           message: |
-            ## Greetings
-            Hi! Welcome to the Awesome FOSS repository. Thanks for making a PR. We look forward to reviwing it as soon as possible.
+            Hello world ! :wave:
