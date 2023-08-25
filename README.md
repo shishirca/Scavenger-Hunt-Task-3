@@ -91,3 +91,7 @@ If you have a custom domain, you can set it up for your GitHub Pages portfolio. 
 Congratulations! You now have your personal portfolio website up and running on GitHub Pages. Regularly update your portfolio with new projects and achievements to keep it fresh and engaging for visitors. Happy coding!
 
 If you have any further questions or need more advanced customization, refer to GitHub's official documentation or explore more about web development using HTML, CSS, and JavaScript.
+
+## Final step:
+To complete the third task of scavenger hunt, you need to make a Pull Request in this repository having the link of your personal portfolio website. 
+All the best!!✨
