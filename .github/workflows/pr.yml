@@ -1,0 +1,16 @@
+name: PR Target Workflow
+on: 
+  pull_request_target:
+  
+jobs:
+  PR-Greeting:
+    name: Pull Request Target
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add the PR Review Policy
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          comment_tag: Greetings
+          message: |
+            ## Greetings
+            Hi! Welcome to the Awesome FOSS repository. Thanks for making a PR. We look forward to reviwing it as soon as possible.
