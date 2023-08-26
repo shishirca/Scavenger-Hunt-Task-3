@@ -1,10 +1,19 @@
+name: Greeting Bot
+on:
+  issues:
+    types:
+      - opened
+  pull_request:
+    types:
+      - opened
+
 jobs:
   greet:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
         uses: actions/checkout@v2
-        
+           
       - name: Greet with a comment
         uses: actions/github-script@v5
         with:
@@ -19,3 +28,4 @@ jobs:
             });
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+   
