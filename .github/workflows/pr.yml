@@ -1,14 +1,21 @@
-name: Greet Contributors
-on: 
-  pull_request_target:
-
 jobs:
-  PR-Greeting:
-    name: Greet Contributors
+  greet:
     runs-on: ubuntu-latest
     steps:
-      - name: Comment PR
-        uses: thollander/actions-comment-pull-request@v2
+      - name: Check out code
+        uses: actions/checkout@v2
+        
+      - name: Greet with a comment
+        uses: actions/github-script@v5
         with:
-          message: |
-            Hello world ! :wave:
+          script: |
+            const issueComment = context.payload.issue || context.payload.pull_request;
+            const greeting = "Hello there! Thanks for opening this " + (issueComment.pull_request ? "pull request" : "issue") + ". Welcome to our repository!";
+            github.issues.createComment({
+              issue_number: issueComment.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: greeting
+            });
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
