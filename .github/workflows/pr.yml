@@ -5,6 +5,7 @@ on:
 
 jobs:
   GreetCommitter:
+    permissions: write-all
     runs-on: ubuntu-latest
     steps:
       - name: "Greet contributor"
