@@ -84,7 +84,7 @@ Remember to link to your project pages from your main `index.html` or any other 
 
 ## Domain Setup (Optional)
 
-If you have a custom domain, you can set it up for your GitHub Pages portfolio. Follow GitHub's guide on [setting up a custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site).
+If you have a custom domain, you can set it up for your GitHub Pages portfolio. Follow GitHub's guide on [setting up a custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site). A custom domain is excellent for branding but is often paid for. So do look into it!
 
 ## Conclusion
 
@@ -93,5 +93,5 @@ Congratulations! You now have your personal portfolio website up and running on 
 If you have any further questions or need more advanced customization, refer to GitHub's official documentation or explore more about web development using HTML, CSS, and JavaScript.
 
 ## Final step:
-To complete the third task of scavenger hunt, you need to make a Pull Request in this repository having the link of your personal portfolio website. 
+To complete the third task of the scavenger hunt, you need to make a Pull Request in this repository having the link to your personal portfolio website. 
 All the best!!✨
