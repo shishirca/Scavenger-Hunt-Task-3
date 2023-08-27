@@ -1,31 +1,13 @@
-name: Greeting Bot
+name: "GreetContributor"
 on:
-  issues:
-    types:
-      - opened
   pull_request:
-    types:
-      - opened
+    types: [opened, synchronize]
 
 jobs:
-  greet:
+  GreetCommitter:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
-        uses: actions/checkout@v2
-           
-      - name: Greet with a comment
-        uses: actions/github-script@v5
-        with:
-          script: |
-            const issueComment = context.payload.issue || context.payload.pull_request;
-            const greeting = "Hello there! Thanks for opening this " + (issueComment.pull_request ? "pull request" : "issue") + ". Welcome to our repository!";
-            github.issues.createComment({
-              issue_number: issueComment.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: greeting
-            });
+      - name: "Greet contributor"
+        uses: ibakshay/greet-contributors-action@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-   
