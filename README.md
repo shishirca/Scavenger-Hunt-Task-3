@@ -1,4 +1,4 @@
-# Scavenger-Hunt-Task-3
+# Scavenger Hunt Task 3
 
 # Personal Portfolio Website 
 
